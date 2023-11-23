@@ -45,6 +45,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 25px;
+    position: relative;
 }
 .calculator__form-label {
     color: $dark;
@@ -68,6 +69,58 @@
         height: 35px
     }
 }
+.calculator__form-item:nth-child(1):after {
+    position: absolute;
+    content: "₽";
+    bottom: 16.5px;
+    right: 12px;
+    color: $black;
+    text-align: right;
+    font-family: $Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+.calculator__form-item:nth-child(2):after {
+    position: absolute;
+    content: "₽";
+    bottom: 36.5px;
+    right: 12px;
+    color: $black;
+    text-align: right;
+    font-family: $Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+.calculator__form-item:nth-child(3):after {
+    position: absolute;
+    content: "Лет";
+    bottom: 38.5px;
+    right: 12px;
+    color: $black;
+    text-align: right;
+    font-family: $Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+.calculator__form-item:nth-child(4):after {
+    position: absolute;
+    content: "%";
+    bottom: 38.5px;
+    right: 12px;
+    color: $black;
+    text-align: right;
+    font-family: $Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -76,11 +129,26 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
     -moz-appearance: textfield;
 }
+.calculator__form-input::placeholder {
+    color: $dark;
+    font-family: $Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 .calculator__form-button {
     padding: 2px 6px;
     justify-content: center;
     border-radius: 2px;
-    background-color: #90909A;
+    background-color: rgba(144, 144, 154, 0.20);
+    color: $dark;
+    text-align: center;
+    font-family: $Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 .calculator__form-button:hover {
     opacity: 0.7;
@@ -116,6 +184,15 @@ input[type="number"] {
 .calculator__result-payment {
     display: flex;
     margin-bottom: 30px;
+    position: relative;
+}
+.calculator__result-payment::after {
+    position: absolute;
+    content: url('/app/images/download.svg');
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
 }
 .calculator__result-credit {
     display: flex;
