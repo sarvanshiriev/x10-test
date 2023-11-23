@@ -1,0 +1,81 @@
+<section class="calculator">
+    <div class="calculator__wrapper">
+        <h2 class="calculator__title">Недвижимость</h2>
+        <div class="calculator__container">
+            <form action="" class="calculator__form">
+                <div class="calculator__form-item">
+                    <label for="calculator__form-price" class="calculator__form-label">Стоимость недвижимости</label>
+                    <input type="number" id="calculator__form-price" class="calculator__form-input" name="user__name" placeholder="3&nbsp;000&nbsp;000">
+                </div>
+                <div class="calculator__form-item">
+                    <label for="calculator__form-contribution" class="calculator__form-label">Первоначальный взнос</label>
+                    <div class="input-group">
+                        <input type="number" id="calculator__form-contribution" class="calculator__form-input" name="user__name" placeholder="500&nbsp;000">
+                        <div class="buttons-group">
+                        <button type="button" onclick="addValue(0)" class="calculator__form-button">0%</button>
+                        <button type="button" onclick="addValue(10)" class="calculator__form-button">10%</button>
+                        <button type="button" onclick="addValue(15)" class="calculator__form-button">15%</button>
+                        <button type="button" onclick="addValue(20)" class="calculator__form-button">20%</button>
+                        <button type="button" onclick="addValue(25)" class="calculator__form-button">25%</button>
+                        <button type="button" onclick="addValue(30)" class="calculator__form-button">30%</button>
+                        </div>
+                </div>
+                </div>
+                <div class="calculator__form-item">
+                    <label for="calculator__form-term" class="calculator__form-label">Срок кредита</label>
+                    <div class="input-group">
+                    <input type="number" id="calculator__form-term" class="calculator__form-input" name="user__name" placeholder="20">
+                    <div class="buttons-group">
+                        <button type="button" onclick="addValue(5)" class="calculator__form-button">5 лет</button>
+                        <button type="button" onclick="addValue(10)" class="calculator__form-button">10 лет</button>
+                        <button type="button" onclick="addValue(15)" class="calculator__form-button">15 лет</button>
+                        <button type="button" onclick="addValue(20)" class="calculator__form-button">20 лет</button>
+                    </div>
+                    </div>
+                </div>
+                <div class="calculator__form-item">
+                    <label for="calculator__form-rate" class="calculator__form-label">Процентная ставка</label>
+                    <div class="input-group">
+                    <input type="number" id="calculator__form-rate" class="calculator__form-input" name="user__name" placeholder="7,3">
+                    <div class="buttons-group">
+                        <button type="button" onclick="addValue(0)" class="calculator__form-button">0,1%</button>
+                        <button type="button" onclick="addValue(0)" class="calculator__form-button">4,5%</button>
+                        <button type="button" onclick="addValue(10)" class="calculator__form-button">6%</button>
+                        <button type="button" onclick="addValue(15)" class="calculator__form-button">7%</button>
+                        <button type="button" onclick="addValue(20)" class="calculator__form-button">7,5%</button>
+                        <button type="button" onclick="addValue(25)" class="calculator__form-button">9,1%</button>
+                        <button type="button" onclick="addValue(30)" class="calculator__form-button">10%</button>
+                    </div>
+                    </div>
+                </div>
+            </form>
+            <div class="calculator__result">
+                <div class="calculator__result-payment">
+                    <span class="calculator__result-month">19&nbsp;835 ₽</span>
+                    <span class="calculator__result-text">Ваш ежемесячный платеж</span>
+                    <a href="#" class="calculator__result-download">
+                        <img src="app/images/download.svg" alt="Скачать график">
+                    </a>
+                </div>
+                <div class="calculator__result-estimation">
+                    <div class="calculator__result-credit">
+                        <span class="calculator__result-value">Кредит</span>
+                        <span class="calculator__result-weight">2&nbsp;500&nbsp;000 ₽</span>
+                    </div>
+                    <div class="calculator__result-credit">
+                        <span class="calculator__result-value">Проценты</span>
+                        <span class="calculator__result-weight">2&nbsp;260&nbsp;450 ₽</span>
+                    </div><div class="calculator__result-credit">
+                        <span class="calculator__result-value">Проценты + кредит</span>
+                        <span class="calculator__result-weight">4&nbsp;760&nbsp;000 ₽</span>
+                    </div>
+                    <div class="calculator__result-credit">
+                        <span class="calculator__result-value">Необходимый доход</span>
+                        <span class="calculator__result-weight">33&nbsp;059 ₽</span>
+                    </div>
+                </div>
+                <button class="calculator__result-button">Вывести график платежей</button>
+            </div>
+        </div>
+    </div>
+</section>

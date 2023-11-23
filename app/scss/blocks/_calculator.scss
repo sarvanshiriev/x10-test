@@ -1,0 +1,259 @@
+.calculator__wrapper {
+    margin-left: 186px;
+}
+.title {
+    color: $black;
+    font-family: $Roboto;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    @media (min-width: $desktop-width) {
+        font-size: 42px;
+        margin-left: 186px;
+        margin-bottom: 15px;
+    }
+}
+.calculator__title {
+    color: $black;
+    font-family: $Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    @media (min-width: $desktop-width) {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+}
+.calculator__container {
+    background-color: $light-grey;
+    border-radius: 4px;
+    border: 1px solid $grey;
+    @media (min-width: $desktop-width) {
+        padding: 30px 6px 30px 54px;
+        display: flex;
+        width: 749px;
+        justify-content: space-between;
+    }
+}
+.calculator__form {
+    border-right: 1px solid $dark-grey;
+    @media (min-width: $desktop-width) {
+        width: 350px;
+    }
+}
+.calculator__form-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.calculator__form-item:not(:last-child) {
+    margin-bottom: 25px;
+}
+.calculator__form-label {
+    color: $dark;
+    font-family: $Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 10px;
+    @media (min-width: $desktop-width) {
+        font-size: 14px;
+    }
+}
+.calculator__form-input {
+    background-color: $white;
+    padding: 0px 12px;
+    border: 1px solid $dark-grey;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    @media (min-width: $desktop-width) {
+        width: 320px;
+        height: 35px
+    }
+}
+.calculator__form-item:nth-child(1):after {
+    position: absolute;
+    content: "₽";
+    bottom: 18.5px;
+    right: 42px;
+    color: $black;
+    text-align: right;
+    font-family: $Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+.calculator__form-item:nth-child(2):after {
+    position: absolute;
+    content: "₽";
+    bottom: 36.5px;
+    right: 42px;
+    color: $black;
+    text-align: right;
+    font-family: $Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+.calculator__form-item:nth-child(3):after {
+    position: absolute;
+    content: "Лет";
+    bottom: 38.5px;
+    right: 42px;
+    color: $black;
+    text-align: right;
+    font-family: $Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+.calculator__form-item:nth-child(4):after {
+    position: absolute;
+    content: "%";
+    bottom: 38.5px;
+    right: 42px;
+    color: $black;
+    text-align: right;
+    font-family: $Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+.calculator__form-input::placeholder {
+    color: $dark;
+    font-family: $Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.calculator__form-button {
+    padding: 2px 6px;
+    justify-content: center;
+    border-radius: 2px;
+    background-color: rgba(144, 144, 154, 0.20);
+    color: $dark;
+    text-align: center;
+    font-family: $Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.calculator__form-button:hover {
+    opacity: 0.7;
+}
+.calculator__result-month {
+    color: $light-black;
+    font-family: $Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-right: 10px;
+    @media (min-width: $desktop-width) {
+        font-size: 26px;
+    }
+}
+.calculator__result-text {
+    color: $black;
+    font-family: $Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: block;
+    @media (min-width: $desktop-width) {
+        font-size: 12px;
+        width: 130px;
+    }
+}
+.calculator__result {
+    @media (min-width: $desktop-width) {
+    width: 309px;
+    }
+}
+.calculator__result-payment {
+    display: flex;
+    margin-bottom: 30px;
+    position: relative;
+}
+.calculator__result-download {
+    width: 16px;
+    height: 16px;
+    margin-left: auto;
+}
+.calculator__result-download:hover {
+    opacity: 0.7;
+}
+.calculator__result-credit {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    position: relative;
+    @media (min-width: $desktop-width) {
+        width: 309px;
+    }
+}
+
+.calculator__result-credit::after {
+    content: "";
+    display: block;
+    border-bottom: 1px dotted $grey;
+    width: 100%;
+    bottom: 3px;
+    position: absolute;
+}
+.calculator__result-value {
+    color: $black;
+    font-family: $Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-color: $light-grey;
+    z-index: 2;
+    padding-right: 5px;
+    @media (min-width: $desktop-width) {
+        font-size: 16px;
+    }
+}
+.calculator__result-weight {
+    color: $light-black;
+    text-align: right;
+    font-family: $Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background-color: $light-grey;
+    z-index: 2;
+    padding-left: 5px;
+}
+.calculator__result-button {
+    width: 309px;
+    height: 48px;
+    flex-shrink: 0;
+    color: $brown;
+    text-align: center;
+    font-family: $Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 4px;
+    border: 2px solid $brown;
+    margin-top: 15px;
+}
+.calculator__result-button:hover {
+    opacity: 0.7;
+}
