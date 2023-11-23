@@ -9,7 +9,7 @@
     line-height: normal;
     @media (min-width: $desktop-width) {
         font-size: 42px;
-        margin-left: 210px;
+        margin-left: 186px;
         margin-bottom: 15px;
     }
 }
@@ -19,7 +19,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-left: 24px;
     @media (min-width: $desktop-width) {
         font-size: 24px;
         margin-bottom: 40px;
@@ -30,22 +29,25 @@
     border-radius: 4px;
     border: 1px solid $grey;
     @media (min-width: $desktop-width) {
-        padding: 30px 6px 5px 54px;
+        padding: 30px 6px 30px 54px;
         display: flex;
         width: 749px;
         justify-content: space-between;
     }
 }
 .calculator__form {
+    border-right: 1px solid $dark-grey;
     @media (min-width: $desktop-width) {
-        width: 320px;
+        width: 350px;
     }
 }
 .calculator__form-item {
     display: flex;
     flex-direction: column;
-    margin-bottom: 25px;
     position: relative;
+}
+.calculator__form-item:not(:last-child) {
+    margin-bottom: 25px;
 }
 .calculator__form-label {
     color: $dark;
@@ -72,8 +74,8 @@
 .calculator__form-item:nth-child(1):after {
     position: absolute;
     content: "₽";
-    bottom: 16.5px;
-    right: 12px;
+    bottom: 18.5px;
+    right: 42px;
     color: $black;
     text-align: right;
     font-family: $Montserrat;
@@ -86,7 +88,7 @@
     position: absolute;
     content: "₽";
     bottom: 36.5px;
-    right: 12px;
+    right: 42px;
     color: $black;
     text-align: right;
     font-family: $Montserrat;
@@ -99,7 +101,7 @@
     position: absolute;
     content: "Лет";
     bottom: 38.5px;
-    right: 12px;
+    right: 42px;
     color: $black;
     text-align: right;
     font-family: $Montserrat;
@@ -112,7 +114,7 @@
     position: absolute;
     content: "%";
     bottom: 38.5px;
-    right: 12px;
+    right: 42px;
     color: $black;
     text-align: right;
     font-family: $Montserrat;
@@ -186,21 +188,31 @@ input[type="number"] {
     margin-bottom: 30px;
     position: relative;
 }
-.calculator__result-payment::after {
-    position: absolute;
-    content: url('/app/images/download.svg');
-    top: 0;
-    right: 0;
+.calculator__result-download {
     width: 16px;
     height: 16px;
+    margin-left: auto;
+}
+.calculator__result-download:hover {
+    opacity: 0.7;
 }
 .calculator__result-credit {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
+    position: relative;
     @media (min-width: $desktop-width) {
         width: 309px;
     }
+}
+
+.calculator__result-credit::after {
+    content: "";
+    display: block;
+    border-bottom: 1px dotted $grey;
+    width: 100%;
+    bottom: 3px;
+    position: absolute;
 }
 .calculator__result-value {
     color: $black;
@@ -208,6 +220,9 @@ input[type="number"] {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    background-color: $light-grey;
+    z-index: 2;
+    padding-right: 5px;
     @media (min-width: $desktop-width) {
         font-size: 16px;
     }
@@ -220,6 +235,9 @@ input[type="number"] {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    background-color: $light-grey;
+    z-index: 2;
+    padding-left: 5px;
 }
 .calculator__result-button {
     width: 309px;
