@@ -1,12 +1,10 @@
-// Функция для рассчета и обновления значений в блоке результатов
+import { formatNumberWithSpaces } from './spaces.js';
 export function updateValues() {
-    // Получаем значения из полей формы
     let propertyPrice = parseFloat(document.getElementById('calculator__form-price').value);
     let initialContribution = parseFloat(document.getElementById('calculator__form-contribution').value);
     let loanTerm = parseInt(document.getElementById('calculator__form-term').value);
     let interestRate = parseFloat(document.getElementById('calculator__form-rate').value);
 
-    // Рассчеты и обновление результатов
     let loanAmount = Math.round(propertyPrice - initialContribution);
     let monthlyInterestRate = interestRate / 100 / 12;
     let numberOfPayments = loanTerm * 12;
@@ -15,12 +13,10 @@ export function updateValues() {
     let totalAmount = Math.round(loanAmount + interestAmount);
     let requiredIncome = Math.round(monthlyPayment * 1.66);
 
-      // Проверка на отрицательные значения и установка их в 0
       loanAmount = Math.max(0, loanAmount);
       interestAmount = Math.max(0, interestAmount);
       totalAmount = Math.max(0, totalAmount);
       requiredIncome = Math.max(0, requiredIncome);
-    // Обновляем значения на странице
     if (propertyPrice<=0 || loanTerm<=0) {
         document.querySelector('.calculator__result-month').textContent = 0;
         document.querySelector('.calculator__result-credit .calculator__result-weight').textContent = 0;
@@ -35,5 +31,16 @@ export function updateValues() {
         document.querySelector('.calculator__result-credit:nth-child(3) .calculator__result-weight').textContent = totalAmount;
         document.querySelector('.calculator__result-credit:nth-child(4) .calculator__result-weight').textContent = requiredIncome;
     }
+    
+    const resultWeightSpans = document.querySelectorAll('.calculator__result-weight');
+    const resultMonthSpan = document.querySelector('.calculator__result-month'); 
+    
+    const originalMonthNumber = parseFloat(resultMonthSpan.textContent);
+    resultMonthSpan.textContent = formatNumberWithSpaces(originalMonthNumber) + ' ₽';
+    
+    resultWeightSpans.forEach((span) => {
+        const originalNumber = parseFloat(span.textContent);
+        span.textContent = formatNumberWithSpaces(originalNumber) + ' ₽';
+    });
 }
 
