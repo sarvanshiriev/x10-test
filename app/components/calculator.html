@@ -6,70 +6,117 @@
             <form action="" class="calculator__form">
                 <div class="calculator__form-item">
                     <label for="calculator__form-price" class="calculator__form-label">Стоимость недвижимости</label>
-                    <input type="number" id="calculator__form-price" class="calculator__form-input" name="user__name" value="3000000">
-                    <input type="range" min="0" max="100000000" value="3000000" step="50000" 
-                    class="calculator__form-slider" id="calculator__form-range-1" 
-                    oninput="updateProgressBar('progress-bar-1',this.value)">
-                    <div id="progress-bar-1"></div>
+                    <input
+                                                type="number"
+                                                id="calculator__form-price"
+                                                class="calculator__form-input"
+                                                name="user__name"
+                                                value="3000000"
+                                            >
+                    <input
+                                                type="range"
+                                                min="0"
+                                                max="100000000"
+                                                value="3000000"
+                                                step="50000" 
+                        class="calculator__form-slider"
+                                                id="calculator__form-range-1" 
+                                            >
+                    <div class="calculator__form-progress-bar" id="progress-bar-1"></div>
                 </div>
                 <div class="calculator__form-item">
                     <label for="calculator__form-contribution" class="calculator__form-label">Первоначальный взнос</label>
                     <div class="input-group">
-                        <input type="number" id="calculator__form-contribution" class="calculator__form-input" 
-                        name="user__name" value="500000">
-                        <input type="range" min="0" max="5000000" value="500000" step="50000" 
-                        class="calculator__form-slider" id="calculator__form-range-2" 
-                        oninput="updateProgressBar('progress-bar-2',this.value)">
-                    <div id="progress-bar-2"></div>
+                        <input
+                                                        type="number"
+                                                        id="calculator__form-contribution"
+                                                        class="calculator__form-input" 
+                            name="user__name"
+                                                        value="500000"
+                                                    >
+                        <input
+                                                        type="range"
+                                                        min="0"
+                                                        max="50000000"
+                                                        value="500000"
+                                                        step="50000" 
+                            class="calculator__form-slider"
+                                                        id="calculator__form-range-2" 
+                                                    >
+                                                    <div class="calculator__form-progress-bar" id="progress-bar-2"></div>
                     <div class="buttons-group">
-                        <button type="button" onclick="addValue(0)" class="calculator__form-button">0%</button>
-                        <button type="button" onclick="addValue(10)" class="calculator__form-button">10%</button>
-                        <button type="button" onclick="addValue(15)" class="calculator__form-button">15%</button>
-                        <button type="button" onclick="addValue(20)" class="calculator__form-button">20%</button>
-                        <button type="button" onclick="addValue(25)" class="calculator__form-button">25%</button>
-                        <button type="button" onclick="addValue(30)" class="calculator__form-button">30%</button>
+                        <button type="button" class="calculator__form-button contribution" data-value="0">0%</button>
+                        <button type="button" class="calculator__form-button contribution" data-value="10">10%</button>
+                        <button type="button" class="calculator__form-button contribution" data-value="15">15%</button>
+                        <button type="button" class="calculator__form-button contribution" data-value="20">20%</button>
+                        <button type="button" class="calculator__form-button contribution" data-value="25">25%</button>
+                        <button type="button" class="calculator__form-button contribution" data-value="30">30%</button>
                     </div>
                 </div>
                 </div>
                 <div class="calculator__form-item">
                     <label for="calculator__form-term" class="calculator__form-label">Срок кредита</label>
                     <div class="input-group">
-                    <input type="number" id="calculator__form-term" class="calculator__form-input" name="user__name" value="20">
-                    <input type="range" min="0" max="30" value="20" step="1" 
-                        class="calculator__form-slider" id="calculator__form-range-3" 
-                        oninput="updateProgressBar('progress-bar-3',this.value)">
-                    <div id="progress-bar-3"></div>
+                    <input
+                                                type="number"
+                                                id="calculator__form-term"
+                                                class="calculator__form-input"
+                                                name="user__name"
+                                                value="20"
+                                            >
+                    <input
+                                                type="range"
+                                                min="5"
+                                                max="30"
+                                                value="20"
+                                                step="1" 
+                      class="calculator__form-slider"
+                                                id="calculator__form-range-3" 
+                                            >
+                    <div class="calculator__form-progress-bar" id="progress-bar-3"></div>
                     <div class="buttons-group">
-                        <button type="button" onclick="addValue(5)" class="calculator__form-button">5 лет</button>
-                        <button type="button" onclick="addValue(10)" class="calculator__form-button">10 лет</button>
-                        <button type="button" onclick="addValue(15)" class="calculator__form-button">15 лет</button>
-                        <button type="button" onclick="addValue(20)" class="calculator__form-button">20 лет</button>
+                        <button type="button" class="calculator__form-button term" data-value="5">5 лет</button>
+                        <button type="button" class="calculator__form-button term" data-value="10">10 лет</button>
+                        <button type="button" class="calculator__form-button term" data-value="15">15 лет</button>
+                        <button type="button" class="calculator__form-button term" data-value="20">20 лет</button>
                     </div>
                     </div>
                 </div>
                 <div class="calculator__form-item">
                     <label for="calculator__form-rate" class="calculator__form-label">Процентная ставка</label>
                     <div class="input-group">
-                    <input type="number" id="calculator__form-rate" class="calculator__form-input" name="user__name" value="7.3">
-                    <input type="range" min="0" max="20" value="7.3" step="0.1" 
-                        class="calculator__form-slider" id="calculator__form-range-4" 
-                        oninput="updateProgressBar('progress-bar-4',this.value)">
-                        <div id="progress-bar-4"></div>
+                    <input
+                                                type="number"
+                                                id="calculator__form-rate"
+                                                class="calculator__form-input"
+                                                name="user__name"
+                                                value="7.3"
+                                            >
+                    <input
+                                                type="range"
+                                                min="0.1"
+                                                max="20"
+                                                value="7.3"
+                                                step="0.1" 
+                      class="calculator__form-slider"
+                                                id="calculator__form-range-4" 
+                                            >
+                                            <div class="calculator__form-progress-bar" id="progress-bar-4"></div>
                     <div class="buttons-group">
-                        <button type="button" onclick="addValue(0)" class="calculator__form-button">0,1%</button>
-                        <button type="button" onclick="addValue(0)" class="calculator__form-button">4,5%</button>
-                        <button type="button" onclick="addValue(10)" class="calculator__form-button">6%</button>
-                        <button type="button" onclick="addValue(15)" class="calculator__form-button">7%</button>
-                        <button type="button" onclick="addValue(20)" class="calculator__form-button">7,5%</button>
-                        <button type="button" onclick="addValue(25)" class="calculator__form-button">9,1%</button>
-                        <button type="button" onclick="addValue(30)" class="calculator__form-button">10%</button>
+                        <button type="button" class="calculator__form-button rate" data-value="0.1">0,1%</button>
+                        <button type="button" class="calculator__form-button rate" data-value="4.5">4,5%</button>
+                        <button type="button" class="calculator__form-button rate" data-value="6">6%</button>
+                        <button type="button" class="calculator__form-button rate" data-value="7">7%</button>
+                        <button type="button" class="calculator__form-button rate" data-value="7.5">7,5%</button>
+                        <button type="button" class="calculator__form-button rate" data-value="9.1">9,1%</button>
+                        <button type="button" class="calculator__form-button rate" data-value="10">10%</button>
                     </div>
                     </div>
                 </div>
             </form>
             <div class="calculator__result">
                 <div class="calculator__result-payment">
-                    <span class="calculator__result-month">19835</span>
+                    <span class="calculator__result-month"></span>
                     <span class="calculator__result-text">Ваш ежемесячный платеж</span>
                     <a href="#" class="calculator__result-download">
                         <img src="app/images/download.svg" alt="Скачать график">
@@ -78,18 +125,18 @@
                 <div class="calculator__result-estimation">
                     <div class="calculator__result-credit">
                         <span class="calculator__result-value">Кредит</span>
-                        <span class="calculator__result-weight">2500000</span>
+                        <span class="calculator__result-weight">0</span>
                     </div>
                     <div class="calculator__result-credit">
                         <span class="calculator__result-value">Проценты</span>
-                        <span class="calculator__result-weight">2260450</span>
+                        <span class="calculator__result-weight">0</span>
                     </div><div class="calculator__result-credit">
                         <span class="calculator__result-value">Проценты + кредит</span>
-                        <span class="calculator__result-weight">4760000</span>
+                        <span class="calculator__result-weight">0</span>
                     </div>
                     <div class="calculator__result-credit">
                         <span class="calculator__result-value">Необходимый доход</span>
-                        <span class="calculator__result-weight">33059</span>
+                        <span class="calculator__result-weight">0</span>
                     </div>
                 </div>
                 <button class="calculator__result-button">Вывести график платежей</button>
