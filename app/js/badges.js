@@ -1,4 +1,5 @@
 import { updateProgressBar } from "./progressBar.js";
+import { updateValues } from './result.js';
 
 const priceNumberInput = document.getElementById('calculator__form-price');
 
@@ -27,6 +28,7 @@ contributionBadges.forEach((badge) => {
 	badge.addEventListener('click', () => {
 		const value = priceNumberInput.value / 100 * Number(badge.dataset.value);
 		onBadgeClick(contributionNumberInput, contributionRangeInput, contributionProgressBar, value);
+		updateValues();
 	})
 });
 
@@ -34,6 +36,7 @@ termBadges.forEach((badge) => {
 	badge.addEventListener('click', () => {
 		debugger;
 		onBadgeClick(termNumberInput, termRangeInput, termProgressBar, Number(badge.dataset.value));
+		updateValues();
 	})
 });
 
@@ -41,5 +44,6 @@ rateBadges.forEach((badge) => {
 	badge.addEventListener('click', () => {
 		debugger;
 		onBadgeClick(rateNumberInput, rateRangeInput, rateProgressBar, Number(badge.dataset.value));
+		updateValues();
 	})
 });

@@ -17,7 +17,7 @@ export function updateValues() {
       interestAmount = Math.max(0, interestAmount);
       totalAmount = Math.max(0, totalAmount);
       requiredIncome = Math.max(0, requiredIncome);
-    if (propertyPrice<=0 || loanTerm<=0) {
+    if (propertyPrice<=0 || loanTerm<=0 || propertyPrice<=initialContribution || interestRate===0) {
         document.querySelector('.calculator__result-month').textContent = 0;
         document.querySelector('.calculator__result-credit .calculator__result-weight').textContent = 0;
         document.querySelector('.calculator__result-credit:nth-child(2) .calculator__result-weight').textContent = 0;

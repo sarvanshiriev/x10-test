@@ -26,12 +26,15 @@ formNumberFields.forEach(([ rangeInput, numberInput, progressBar ]) => {
 	numberInputElement.addEventListener('input', ({ target }) => {
 		let targetValue = Number(target.value);
 
+		if (target.value === "") {
+			target.value= 0;
+		}
 		if (targetValue > rangeInputElement.max) {
 			targetValue = Number(target.value.slice(0, -1));
 			numberInputElement.value = targetValue;
 		}
 			rangeInputElement.value = targetValue;
 			updateProgressBar(rangeInputElement, progressBarElement, targetValue);
+			updateValues();
 	})
-    updateValues();
 })
