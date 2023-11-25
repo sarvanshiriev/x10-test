@@ -26,7 +26,7 @@ function onBadgeClick(numberInputElement, rangeInputElement, progressBarElement,
 
 contributionBadges.forEach((badge) => {
 	badge.addEventListener('click', () => {
-		const value = priceNumberInput.value / 100 * Number(badge.dataset.value);
+		const value = priceNumberInput.value.replace(/\s/g, '') / 100 * Number(badge.dataset.value);
 		onBadgeClick(contributionNumberInput, contributionRangeInput, contributionProgressBar, value);
 		updateValues();
 	})

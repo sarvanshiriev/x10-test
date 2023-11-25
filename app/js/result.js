@@ -1,7 +1,7 @@
 import { formatNumberWithSpaces } from './spaces.js';
 export function updateValues() {
-    let propertyPrice = parseFloat(document.getElementById('calculator__form-price').value);
-    let initialContribution = parseFloat(document.getElementById('calculator__form-contribution').value);
+    let propertyPrice = parseFloat(document.getElementById('calculator__form-price').value.replace(/\s/g, ''));
+    let initialContribution = parseFloat(document.getElementById('calculator__form-contribution').value.replace(/\s/g, ''));
     let loanTerm = parseInt(document.getElementById('calculator__form-term').value);
     let interestRate = parseFloat(document.getElementById('calculator__form-rate').value);
 
