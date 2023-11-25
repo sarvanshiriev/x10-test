@@ -1,4 +1,5 @@
 import { updateValues } from './result.js';
+import { inputSpaces } from './inputSpaces.js';
 
 export function updateProgressBar(rangeInputElement, progressBarElement, value) {
 	const max = rangeInputElement.max;
@@ -21,7 +22,7 @@ formNumberFields.forEach(([ rangeInput, numberInput, progressBar ]) => {
 		updateProgressBar(rangeInputElement, progressBarElement, target.value);
 		numberInputElement.value = target.value;
         updateValues();
-		
+		inputSpaces();
 	})
 
 	numberInputElement.addEventListener('input', ({ target }) => {
@@ -37,6 +38,6 @@ formNumberFields.forEach(([ rangeInput, numberInput, progressBar ]) => {
 			rangeInputElement.value = targetValue;
 			updateProgressBar(rangeInputElement, progressBarElement, targetValue);
 			updateValues();
-			
+			inputSpaces();
 	})
 })

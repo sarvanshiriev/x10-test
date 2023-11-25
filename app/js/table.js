@@ -1,3 +1,5 @@
+import { formatNumberWithSpaces } from './spaces.js';
+
 const resultButton = document.querySelector('.calculator__result-button');
 
 function getFirstDayOfNextMonth(currentDate) {
@@ -17,8 +19,8 @@ function tableResult() {
          const tableBody = document.getElementById('table__payment');
          const tableFoot = document.getElementById('table__foot');
         // Получаем значения из формы
-        let propertyPrice = parseFloat(document.getElementById('calculator__form-price').value);
-        let initialContribution = parseFloat(document.getElementById('calculator__form-contribution').value);
+        let propertyPrice = parseFloat(document.getElementById('calculator__form-price').value.replace(/\s/g, ''));
+        let initialContribution = parseFloat(document.getElementById('calculator__form-contribution').value.replace(/\s/g, ''));
         let loanTerm = parseInt(document.getElementById('calculator__form-term').value);
         let interestRate = parseFloat(document.getElementById('calculator__form-rate').value);
 
@@ -48,10 +50,10 @@ function tableResult() {
             row.innerHTML = `
                 <td>${paymentNumber}</td>
                 <td>${firstDayOfNextMonth.toLocaleDateString()}</td>
-                <td>${remainingLoanAmount.toFixed(2)}</td>
-                <td>${principalPayment.toFixed(2)}</td>
-                <td>${interestPayment.toFixed(2)}</td>
-                <td>${monthlyPayment.toFixed(2)}</td>
+                <td>${formatNumberWithSpaces(remainingLoanAmount.toFixed(2))}</td>
+                <td>${formatNumberWithSpaces(principalPayment.toFixed(2))}</td>
+                <td>${formatNumberWithSpaces(interestPayment.toFixed(2))}</td>
+                <td>${formatNumberWithSpaces(monthlyPayment.toFixed(2))}</td>
             `;
 
             tableBody.appendChild(row);
