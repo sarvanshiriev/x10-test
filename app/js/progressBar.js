@@ -21,6 +21,7 @@ formNumberFields.forEach(([ rangeInput, numberInput, progressBar ]) => {
 		updateProgressBar(rangeInputElement, progressBarElement, target.value);
 		numberInputElement.value = target.value;
         updateValues();
+		
 	})
 
 	numberInputElement.addEventListener('input', ({ target }) => {
@@ -36,5 +37,6 @@ formNumberFields.forEach(([ rangeInput, numberInput, progressBar ]) => {
 			rangeInputElement.value = targetValue;
 			updateProgressBar(rangeInputElement, progressBarElement, targetValue);
 			updateValues();
+			
 	})
 })

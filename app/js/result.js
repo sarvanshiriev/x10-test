@@ -31,7 +31,6 @@ export function updateValues() {
         document.querySelector('.calculator__result-credit:nth-child(3) .calculator__result-weight').textContent = totalAmount;
         document.querySelector('.calculator__result-credit:nth-child(4) .calculator__result-weight').textContent = requiredIncome;
     }
-    
     const resultWeightSpans = document.querySelectorAll('.calculator__result-weight');
     const resultMonthSpan = document.querySelector('.calculator__result-month'); 
     
@@ -43,4 +42,4 @@ export function updateValues() {
         span.textContent = formatNumberWithSpaces(originalNumber) + ' ₽';
     });
 }
-
+document.addEventListener('DOMContentLoaded',updateValues());
