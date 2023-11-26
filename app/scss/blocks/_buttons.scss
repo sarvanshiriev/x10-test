@@ -4,19 +4,23 @@
     align-items: center;
 }
 .button__application {
-    width: 235px;
     border-radius: 4px;
     border: 2px solid $brown;
     background: $brown;
     color: $white;
     text-align: center;
     font-family: $Montserrat;
-    font-size: 16px;
+    font-size: 10px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     padding: 14px 20px;
     margin-right: 20px;
+    max-width: 235px;
+    @media (min-width: $tablet-width) {
+        max-width: 235px;
+        font-size: 16px;
+    }
     @media (min-width: $desktop-width) {
         margin-left: 186px;
     }
@@ -28,11 +32,14 @@
     color: $brown;
     text-align: center;
     font-family: $Montserrat;
-    font-size: 13px;
+    font-size: 10px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     text-decoration-line: underline !important;
+    @media (min-width: $tablet-width) {
+        font-size: 13px;
+    }
 }
 .button__send:hover {
     opacity: 0.7;
